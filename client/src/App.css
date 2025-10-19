@@ -1,0 +1,283 @@
+/* Minimal overrides with Bootstrap */
+:root {
+  --text-main: #f4f9ff;
+  --text-secondary: #e8f2fa;
+  --text-muted: #cfdbe6;
+  --text-heading: #ffffff;
+}
+body {
+  background: #0d1b2a;
+  color: var(--text-main);
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-heading);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.status {
+  background: rgba(255,255,255,0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.users ul {
+  list-style: none;
+  padding: 0;
+}
+
+.users li {
+  background: rgba(0,0,0,0.2);
+  margin: 0.4rem 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+}
+
+.add-user form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.add-user input {
+  flex: 1 1 200px;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.add-user button {
+  padding: 0.6rem 1.2rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-user button:hover:not([disabled]) {
+  background: #444;
+}
+
+.add-user button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.container, .border, .list-group-item, .card {
+  background-color: #1b263b;
+}
+
+h2, h4, h5 {
+  color: var(--text-heading);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.nav-tabs .nav-link {
+  color: var(--text-secondary);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #243b55;
+  color: var(--text-heading);
+  border-color: #243b55 #243b55 #1b263b;
+}
+
+.card.panel {
+  background: #1b263b;
+  border: 1px solid #324b67;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card.panel-header {
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+
+.list-group-item {
+  background: #1e2d44;
+  border-color: #2f4e74;
+  color: var(--text-main);
+}
+
+.list-group-item:hover {
+  background: #243b55;
+}
+
+.form-control, .form-select {
+  background-color: #243b55;
+  border: 1px solid #324b67;
+  color: var(--text-secondary);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #2c4664;
+  color: #fff;
+  border-color: #4d7ab1;
+  box-shadow: 0 0 0 .2rem rgba(77,122,177,0.25);
+}
+
+.btn-primary {
+  background-color: #2d6cdf;
+  border-color: #2d6cdf;
+}
+
+.btn-primary:hover {
+  background-color: #1e54ad;
+  border-color: #1e54ad;
+}
+
+.btn-outline-primary {
+  color: #4da3ff;
+  border-color: #4da3ff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4da3ff;
+  color: #0d1b2a;
+}
+
+.btn-success {
+  background-color: #2e8b57;
+  border-color: #2e8b57;
+}
+
+.btn-success:hover {
+  background-color: #246a44;
+  border-color: #246a44;
+}
+
+.btn-secondary {
+  background-color: #586b86;
+  border-color: #586b86;
+}
+
+.btn-secondary:hover {
+  background-color: #435468;
+  border-color: #435468;
+}
+
+.badge-info, .text-bg-info {
+  background-color: #2d9cca !important;
+}
+
+.alert-info {
+  background-color: #243b55;
+  color: #d0e6f6;
+  border-color: #324b67;
+}
+
+.alert-secondary {
+  background-color: #1e2d44;
+  color: #c9d7e1;
+  border-color: #2f4e74;
+}
+
+.details summary {
+  color: #4da3ff;
+}
+
+.form-check-input {
+  background-color: #243b55;
+  border: 1px solid #4d7ab1;
+}
+
+.form-check-input:checked {
+  background-color: #2d6cdf;
+  border-color: #2d6cdf;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1b263b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #324b67;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d7ab1;
+}
+
+.panel {
+  background: #1b263b;
+  border: 1px solid #324b67;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.panel + .panel {
+  margin-top: 1rem;
+}
+
+.alert-info.status-pill {
+  display: inline-block;
+  padding: .4rem .9rem;
+  border-radius: 999px;
+  font-size: .85rem;
+}
+
+.submitted-date {
+  color: var(--text-main);
+  font-size: .75rem;
+  background: #2c4664;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+/* Floating label style for inputs when parent has data-label attribute */
+.floating-label-wrapper {
+  position: relative;
+}
+.floating-label-wrapper input.form-control,
+.floating-label-wrapper textarea.form-control {
+  padding-top: 1.4rem;
+}
+.floating-label-wrapper label.floating-label {
+  position: absolute;
+  top: .35rem;
+  left: .75rem;
+  font-size: .65rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: all .15s ease-in-out;
+}
+.floating-label-wrapper input.form-control:focus + label.floating-label,
+.floating-label-wrapper textarea.form-control:focus + label.floating-label {
+  color: var(--text-heading); /* brighter on focus */
+}
+/* When input has value (simulate filled) */
+.floating-label-wrapper input.form-control:not(:placeholder-shown) + label.floating-label,
+.floating-label-wrapper textarea.form-control:not(:placeholder-shown) + label.floating-label {
+  color: var(--text-secondary); /* subtle but still light */
+}

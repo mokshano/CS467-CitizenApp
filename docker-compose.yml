@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: appdb
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    container_name: citizen-science-api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 8080
+      MONGO_URI: mongodb://mongo:27017/appdb
+    ports:
+      - "8080:8080"
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+  client:
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    container_name: citizen-science-ui
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_started
+    ports:
+      - "3000:80"
+
+volumes:
+  mongo_data:

@@ -281,8 +281,34 @@ h2, h4, h5 {
 .floating-label-wrapper textarea.form-control:not(:placeholder-shown) + label.floating-label {
   color: var(--text-secondary); /* subtle but still light */
 }
+
 .modal .form-label, .modal label.form-label {
   display: block;
   font-weight: 600;
   color: #ffffff !important;
+}
+
+.modal .form-check-label {
+  color: #ffffff !important;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: .02em;
+}
+
+/* Specifically target the required field checkbox */
+#requiredCheck + .form-check-label {
+  color: #ffffff !important;
+}
+
+.project-desc {
+  color: var(--text-secondary) !important;
+}
+
+.project-fields-badge {
+  background: #2c4664 !important;
+  color: var(--text-heading) !important;
+  font-size: .65rem;
+  letter-spacing: .03em;
+  margin-top: 2px;
 }

@@ -16,8 +16,8 @@ const ProjectsView = ({ projects, projectLoading, editingProject, projectForm, f
           <li key={p._id} className="list-group-item d-flex justify-content-between align-items-start">
             <div>
               <strong>{p.title}</strong> <span className="badge text-bg-info ms-2">{p.classCode}</span>
-              <div className="small text-muted mb-1">{p.description}</div>
-              <small className="text-muted">Fields: {p.fields.length}</small>
+              <div className="small project-desc mb-1">{p.description}</div>
+              <span className="badge text-bg-secondary project-fields-badge">Fields: {p.fields.length}</span>
             </div>
             <div className="ms-2 d-flex flex-column gap-1">
               <button className="btn btn-sm btn-outline-primary" onClick={() => openEditProjectModal(p)}>Edit</button>

@@ -281,3 +281,8 @@ h2, h4, h5 {
 .floating-label-wrapper textarea.form-control:not(:placeholder-shown) + label.floating-label {
   color: var(--text-secondary); /* subtle but still light */
 }
+.modal .form-label, .modal label.form-label {
+  display: block;
+  font-weight: 600;
+  color: #ffffff !important;
+}
